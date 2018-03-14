@@ -22,18 +22,17 @@ public class Filter {
     private static String type ="";
 
     public static void main(String[] args) {
+        readParameters();
+
         checkValuesInTraditionalWay();
+        // JAVA 8 Stream API usage
+        checkValuesWithStream();
     }
 
     private static void checkValuesInTraditionalWay(){
-
-        readParameters();
-
         for (int i = 0; i < 100; i++) {
             checkValue(values[i]);
         }
-        // JAVA 8 Stream API usage
-        checkValuesWithStream();
     }
 
     private static void readParameters() {
