@@ -1,7 +1,8 @@
-package com.missingartifacts;
+package com.missingartifacts.streamexamples;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -35,9 +36,10 @@ public class Filter {
         }
     }
 
-    private static void readParameters() {
+    private static void readParameters(){
+        BufferedReader reader = null;
         try {
-            BufferedReader reader =
+            reader =
                     new BufferedReader(new FileReader("C:\\filter.txt")); // Upper;312
 
             String line = reader.readLine();
