@@ -8,11 +8,11 @@ import java.util.stream.Collectors;
 
 public class Filter04 {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         List<Student> students = StudentUtils.createStudentList();
 
         List<Double> collect = students.stream()
-                            .map(x -> x.getGPA())
+                            .map(Student::getGPA)
                             .filter(x->x>3.0)
                             .collect(Collectors.toList());
 
